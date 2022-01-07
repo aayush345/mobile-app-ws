@@ -5,12 +5,16 @@ import java.util.Random;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component /* it could be @Service also */
 public class Utils {
 	private final Random random = new SecureRandom();
 	private final String ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 	public String generateUserId(int length) {
+		return generateRandomString(length);
+	}
+
+	public String generateAddressId(int length) {
 		return generateRandomString(length);
 	}
 
